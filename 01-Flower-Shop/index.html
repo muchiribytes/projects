@@ -5,20 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explore a variety of indoor plants for your home or office.">
   <title>Indoor Plants</title>
+  
+  <style>
+    /* Soft Gray Theme Styles */
+    body {
+      background-color: #f4f5f7; /* Soft gray to prevent eye strain */
+      color: #032133;            /* Dark blue text for clear readability */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Header styling */
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #032133;
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      color: #45db82; /* Accent green */
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: rgba(3, 33, 51, 0.15); /* Soft dark divider line */
+      margin: 25px 0;
+    }
+
+    /* Card styling */
+    article {
+      background-color: #fffffb; /* Soft off-white for the cards to stand out */
+      border: 1px solid rgba(3, 33, 51, 0.1); 
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 6px rgba(3, 33, 51, 0.02); /* Very subtle depth shadow */
+    }
+
+    h2 {
+      color: #45db82; /* Green heading */
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .price-tag {
+      font-weight: bold;
+    }
+
+    .price-value {
+      color: #45db82; /* Accent green price */
+    }
+
+    /* Image containment */
+    .plant-img {
+      display: block;
+      border: 1px solid #45db82; /* Clean green border around image */
+      border-radius: 6px;
+      margin-top: 15px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: rgba(3, 33, 51, 0.6);
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Indoor Plants</h1>
-  
-  <h2>Peace Lily</h2>
-  <p>The peace Lily, known for its elegant white flowers, is a popular choice for indoor spaces.</p>
-  <p>Price: $15</p>
-  <img src="spathiphyllum-peace-lily.jpg" alt="Peace Lily">
+  <main>
+    <header>
+      <h1>Indoor Plants</h1>
+      <p class="subtitle">Breathe life into your personal workspace</p>
+      <hr>
+    </header>
 
-  <h2>Zanzibar Gem</h2>
-  <p>The Zanzibar Gem, with its glossy green follage, is a low-maintenance indoor plant perfect for beginners.</p>
-  <p>Price: $20</p>
-  <img src="zamioculcas-zanzibar-gem.jpg" alt="Zanzibar Gem">
-  
+    <!-- Plant 1 -->
+    <article>
+      <h2>Peace Lily</h2>
+      <p>The Peace Lily, known for its elegant white flowers, is a popular choice for indoor spaces.</p>
+      <p class="price-tag">Price: <span class="price-value">$15</span></p>
+      <img src="spathiphyllum-peace-lily.jpg" alt="Peace Lily" width="220" height="220" class="plant-img">
+    </article>
+
+    <!-- Plant 2 -->
+    <article>
+      <h2>Zanzibar Gem</h2>
+      <p>The Zanzibar Gem, with its glossy green foliage, is a low-maintenance indoor plant perfect for beginners.</p>
+      <p class="price-tag">Price: <span class="price-value">$20</span></p>
+      <img src="zamioculcas-zanzibar-gem.jpg" alt="Zanzibar Gem" width="220" height="220" class="plant-img">
+    </article>
+
+    <footer>
+      <p>&copy; 2026 Indoor Plant Shop. Designed with care.</p>
+    </footer>
+  </main>
+
 </body>
 </html>
