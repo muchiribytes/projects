@@ -5,78 +5,219 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Embark on a culinary adventure with Taste of travel, exploring global flavors and recipes.">
   <title>Taste of Travel</title>
+  
+  <style>
+    /* Soft Gray Theme Styles */
+    body {
+      background-color: #f4f5f7; /* Soft gray background to prevent eye strain */
+      color: #032133;            /* Dark blue text for clear readability */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Header styling */
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #032133;
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: rgba(3, 33, 51, 0.15); /* Soft dark divider line */
+      margin: 25px 0;
+    }
+
+    /* Card/Article styling */
+    article {
+      background-color: #fffffb; /* Soft off-white for the recipe card */
+      border: 1px solid rgba(3, 33, 51, 0.1); 
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 6px rgba(3, 33, 51, 0.02);
+    }
+
+    h2 {
+      color: #45db82; /* Vibrant accent green for the recipe title */
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      color: #032133;
+      font-size: 1.25rem;
+      border-bottom: 2px solid rgba(69, 219, 130, 0.3); /* Soft green line under subheadings */
+      padding-bottom: 4px;
+      margin-top: 25px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Blockquote styling */
+    blockquote {
+      background-color: #f4f5f7;
+      border-left: 4px solid #45db82; /* Green accent bar */
+      margin: 20px 0;
+      padding: 15px 20px;
+      font-style: italic;
+      color: #032133;
+    }
+
+    /* List styling */
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    /* Image containment (keeps it from being too big) */
+    .recipe-img {
+      display: block;
+      border: 1px solid #45db82; /* Green border around image */
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+
+    /* Table styling for readability */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #ffffff;
+    }
+
+    caption {
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 8px;
+      color: #032133;
+    }
+
+    th, td {
+      border: 1px solid rgba(3, 33, 51, 0.15);
+      padding: 10px 12px;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background-color: #032133;
+      color: #fffffb;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: rgba(3, 33, 51, 0.6);
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Discover the Flavours of Thailand</h1>
-  <h2>Tom Yum Goog: A spicy Thai Delight</h2>
+  <main>
+    <header>
+      <h1>Discover the Flavours of Thailand</h1>
+      <hr>
+    </header>
 
-  <p>Tom Yum Goong is a classic Thai soup renowned for its bold flavors and aromatic spices. This hot and sour soup features a tantalizing blend of lemongrass, galangal, and kaffir lime leaves, combined with succulent shrimp.</p>
+    <article>
+      <h2>Tom Yum Goong: A spicy Thai Delight</h2>
+      
+      <p>Tom Yum Goong is a classic Thai soup renowned for its bold flavors and aromatic spices. This hot and sour soup features a tantalizing blend of lemongrass, galangal, and kaffir lime leaves, combined with succulent shrimp.</p>
 
-  <blockquote>
-    "The key to a delicious Tom Yum Goong lies in the balance of flavours - sweet, sour, salty, and spicy."
-  </blockquote>
+      <blockquote>
+        "The key to a delicious Tom Yum Goong lies in the balance of flavours - sweet, sour, salty, and spicy."
+      </blockquote>
 
-  <h3>Ingredients:</h3>
-  <ul>
-    <li><strong>Lemongrass:</strong> 2 stalks</li>
-    <li><strong>Thai basil:</strong> 1 cup</li>
-    <li><strong>Kaffir Lime Leaves:</strong> 3 leaves</li>
-    <li><strong>Shrimp:</strong> 500g</li>
-  </ul>
+      <h3>Ingredients:</h3>
+      <ul>
+        <li><strong>Lemongrass:</strong> 2 stalks</li>
+        <li><strong>Thai basil:</strong> 1 cup</li>
+        <li><strong>Kaffir Lime Leaves:</strong> 3 leaves</li>
+        <li><strong>Shrimp:</strong> 500g</li>
+      </ul>
 
-  <h3>Preparation:</h3>
-  <ol>
-    <li><em>Simmer</em> the broth for 10 minutes.</li>
-    <li>Add lemongrass, galangal, and kaffir lime leaves.</li>
-    <li><em>Stir</em> in shrimp and <em>cook</em> until pink.</li>
-    <li><em>Season</em> with fish sauce and lime juice, and chili paste.</li>
-    <li><em>Garnish</em> with Thai basil and serve hot.</li>
-  </ol>
+      <h3>Preparation:</h3>
+      <ol>
+        <li><em>Simmer</em> the broth for 10 minutes.</li>
+        <li>Add lemongrass, galangal, and kaffir lime leaves.</li>
+        <li><em>Stir</em> in shrimp and <em>cook</em> until pink.</li>
+        <li><em>Season</em> with fish sauce and lime juice, and chili paste.</li>
+        <li><em>Garnish</em> with Thai basil and serve hot.</li>
+      </ol>
 
-  <h3>Cooking Tips:</h3>
-  <ul>
-    <li><sup>1/4</sup> cup of fish sauce adds authentic Thai flavor.</li>
-    <li><sub>1</sub> tablespoon of chili paste gives the soup its signature heat.</li>
-  </ul>
+      <h3>Cooking Tips:</h3>
+      <ul>
+        <li><sup>1/4</sup> cup of fish sauce adds authentic Thai flavor.</li>
+        <li><sub>1</sub> tablespoon of chili paste gives the soup its signature heat.</li>
+      </ul>
 
-  <img src="thai-soup.jpg" alt="Tom Yum Goong">
+      <!-- Controlled Image size matching the first page layout -->
+      <img src="thai-soup.jpg" alt="Tom Yum Goong" width="220" height="220" class="recipe-img">
 
-  <br><br>
+      <table>
+        <caption>Recipe Details</caption>
+        <thead>
+          <tr>
+            <th>Ingredient</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lemongrass</td>
+            <td>2 stalks</td>
+          </tr>
+          <tr>
+            <td>Thai basil</td>
+            <td>1 cup</td>
+          </tr>
+          <tr>
+            <td>Kaffir Lime Leaves</td>
+            <td>3 leaves</td>
+          </tr>
+          <tr>
+            <td>Shrimp</td>
+            <td>500g</td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Preparation Time:</strong> 20 mins</td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Serving Suggestions:</strong> Serve with steamed rice or jasmine tea.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
 
-  <table>
-    <caption>Recipe Details</caption>
-    <thead>
-      <tr>
-        <th>Ingredient</th>
-        <th>Quantity</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Lemongrass</td>
-        <td>2 stalks</td>
-      </tr>
-      <tr>
-        <td>Thai basil</td>
-        <td>1 cup</td>
-      </tr>
-      <tr>
-        <td>Kaffir Lime Leaves</td>
-        <td>3 leaves</td>
-      </tr>
-      <tr>
-        <td>Shrimp</td>
-        <td>500g</td>
-      </tr>
-      <tr>
-        <td colspan="2"><strong>Preparation Time:</strong>20</td>
-      </tr>
-      <tr>
-        <td colspan="2"><strong>Serving Suggestions:</strong> Serve with steamed rice or jasmine tea.</td>
-      </tr>
-    </tbody>
-  </table>
-  
+    <footer>
+      <p>&copy; 2026 Taste of Travel. Exploring global flavors, one recipe at a time.</p>
+    </footer>
+  </main>
+
 </body>
 </html>
