@@ -1,0 +1,75 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Header styles */
+header {
+  background-color: #333333;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Section styles */
+section {
+  margin: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333333;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Element selector */
+h2 {
+  color: black;
+}
+
+/* Class selector */
+.highlight {
+  background-color: orange;
+  color: white;
+  padding: 4px;
+}
+
+/* ID selector */
+#header {
+  border-bottom: 2px solid orange;
+}
+
+/* Attribute selector */
+a[href^="mailto:"] {
+  color: orange;
+}
+
+/* Pseudo-class selector */
+a:hover {
+  color: white;
+}
+
+/* Pseudo-element selctor */
+p::first-line {
+  font-weight: bold;
+}
+
+/* Combinator selector */
+header + main {
+  border-top: 1px solid gray;
+}
+
+/* External h1 styles */
+h1 {
+  color: green !important; /* Overridden by inline styles */
+}
+
+/* Externall P styles */
+p {
+  color: red;
+}
+
+#header h1 {
+  color: orange !important;
+}
