@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Accessible Navigation Bar -->
+    <header>
+        <nav aria-label="Main Navigation">
+            <!-- Screen reader accessible label for menu context -->
+            <span id="menu-label" class="screen-reader-text">Main Navigation Menu</span>
+            
+            <ul role="menubar" aria-labelledby="menu-label">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container using Flexbox Layout -->
+    <div class="container">
+        
+        <!-- Sidebar Navigation/Information -->
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Additional helpful resources and internal site navigation links.</p>
+            <ul>
+                <li><a href="#faq">Frequently Asked Questions</a></li>
+                <li><a href="#support">Support Center</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <h1>Accessible Web Design</h1>
+            <p>Ensuring your website is fully accessible creates an inclusive experience for all users, including those utilizing screen readers or keyboard navigation.</p>
+            
+            <p>Learn more about accessibility guidelines by visiting the <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C Web Accessibility Initiative</a>.</p>
+            
+            <section>
+                <h2>Screen Reader Utility Demonstration</h2>
+                <!-- Accessible button tied to visually hidden screen reader text -->
+                <span id="btn-desc" class="screen-reader-text">Pressing this button opens the interactive user profile menu</span>
+                <button type="button" class="action-btn" aria-labelledby="btn-desc">
+                    User Options
+                </button>
+            </section>
+        </main>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Inclusive Web Tech. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
