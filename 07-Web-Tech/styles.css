@@ -1,121 +1,193 @@
 /* ==========================================
-   4. Readable Text & Base Styles
+   1. Base & Readable Typography
    ========================================== */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;              /* 4. Set font size to 16px */
-    color: #333333;               /* 4. Set body text color to #333 */
-    background-color: #f4f4f4;    /* 4. High contrast background color #f4f4f4 */
+    font-size: 16px;              /* Accessible base font size */
+    color: #333333;               /* High-contrast body text */
+    background-color: #f4f4f4;    /* Clean background */
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;           /* Sticky footer layout */
 }
 
+/* ==========================================
+   2. Centered Header & Clear Navigation
+   ========================================== */
 header {
     background-color: #ffffff;
     border-bottom: 2px solid #e0e0e0;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* ==========================================
-   1. Clear Navigation
-   ========================================== */
-nav ul {
-    list-style-type: none;        /* 1. Remove default list styling */
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;          /* Centered header content */
+    gap: 12px;
+}
+
+.site-title {
     margin: 0;
-    padding: 10px 20px;
-    display: flex;                /* Flexbox for clean horizontal alignment */
-    gap: 15px;                    /* 1. Add spacing between items */
+    font-size: 1.5rem;
+    color: #002583;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;                /* Centered horizontal nav links */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 nav li a {
+    color: #002583;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 18px;
     border-radius: 4px;
     display: inline-block;
+    font-weight: 600;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* 1. Clear visual feedback on hover and focus */
+/* Active Page & Visual Hover/Focus Feedback */
 nav li a:hover,
-nav li a:focus {
+nav li a:focus,
+nav li a.active {
     background-color: #002583;
     color: #ffffff;
-    outline: 2px solid #ffb800;    /* Distinct focus outline for keyboard users */
+    outline: 2px solid #ffb800;    /* High-visibility focus indicator */
 }
 
 /* ==========================================
-   2. Identifiable Links
+   3. Accessible Links & Buttons
    ========================================== */
 a {
-    color: #002583;               /* 2. Distinct link color */
-    text-decoration: underline;    /* 2. Distinct underline for inline links */
+    color: #002583;
+    text-decoration: underline;
     font-weight: 600;
 }
 
-/* 2. Provide visual feedback on hover and focus states */
 a:hover,
 a:focus {
     color: #0056b3;
-    text-decoration: none;
-    background-color: #e2e8f0;
     outline: 2px dashed #002583;
 }
 
-/* ==========================================
-   3. Simple and Predictable Layouts
-   ========================================== */
-.container {
-    display: flex;                /* 3. Use flexbox to structure layout */
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 0 20px;
-    gap: 20px;
-}
-
-.sidebar {
-    flex: 1;                     /* Sidebar width proportion */
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 6px;
-    border: 1px solid #dddddd;
-}
-
-.main-content {
-    flex: 3;                     /* Main content area proportion */
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 6px;
-    border: 1px solid #dddddd;
-}
-
 .action-btn {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
+    font-weight: bold;
     background-color: #002583;
     color: #ffffff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-.action-btn:focus,
-.action-btn:hover {
+.action-btn:hover,
+.action-btn:focus {
     background-color: #001242;
     outline: 3px solid #ffb800;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+/* ==========================================
+   4. Simple, Predictable Layout (Flexbox)
+   ========================================== */
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 24px;
+    flex: 1;                     /* Pushes footer down automatically */
+}
+
+.sidebar {
+    flex: 1;
     background-color: #ffffff;
-    border-top: 1px solid #dddddd;
+    padding: 24px;
+    border-radius: 6px;
+    border: 1px solid #dddddd;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.main-content {
+    flex: 3;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #dddddd;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #002583;
+    border-color: #002583;
 }
 
 /* ==========================================
-   5. Screen Reader Accessibility Class
+   5. Centered Footer
    ========================================== */
-/* 5. Class to hide content visually while keeping it fully accessible to screen readers */
+footer {
+    text-align: center;           /* Fully centered footer */
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #dddddd;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ==========================================
+   6. Screen Reader Utility Class
+   ========================================== */
 .screen-reader-text {
     position: absolute;
     width: 1px;
@@ -128,14 +200,9 @@ footer {
     border: 0;
 }
 
-/* Responsive collapse for small screens */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        gap: 5px;
     }
 }

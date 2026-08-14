@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Inclusive Web Tech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1 class="site-title">Inclusive Web Tech</h1>
+            <nav aria-label="Main Navigation">
+                <span id="menu-label" class="screen-reader-text">Main Navigation Menu</span>
+                <ul role="menubar" aria-labelledby="menu-label">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <aside class="sidebar">
+            <h2>Need a Audit?</h2>
+            <p>Reach out through our <a href="contact.html">Contact Form</a> to schedule an accessibility review.</p>
+        </aside>
+
+        <main class="main-content">
+            <h1>Our Web Accessibility Services</h1>
+            
+            <section>
+                <h2>1. Accessibility Audits</h2>
+                <p>We review your markup structure, color ratios, and keyboard flows to flag accessibility bottlenecks against WCAG guidelines.</p>
+            </section>
+
+            <section>
+                <h2>2. ARIA Implementation</h2>
+                <p>We inject explicit screen reader context attributes (`aria-labelledby`, hidden helper utilities, live regions) into complex UI components.</p>
+            </section>
+        </main>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Inclusive Web Tech. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

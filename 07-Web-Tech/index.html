@@ -3,58 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Tech</title>
+    <title>Home - Inclusive Web Tech</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Accessible Navigation Bar -->
+    <!-- Centered Header & Nav -->
     <header>
-        <nav aria-label="Main Navigation">
-            <!-- Screen reader accessible label for menu context -->
-            <span id="menu-label" class="screen-reader-text">Main Navigation Menu</span>
-            
-            <ul role="menubar" aria-labelledby="menu-label">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1 class="site-title">Inclusive Web Tech</h1>
+            <nav aria-label="Main Navigation">
+                <span id="menu-label" class="screen-reader-text">Main Navigation Menu</span>
+                <ul role="menubar" aria-labelledby="menu-label">
+                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Main Container using Flexbox Layout -->
+    <!-- Main Page Layout -->
     <div class="container">
         
-        <!-- Sidebar Navigation/Information -->
         <aside class="sidebar">
-            <h2>Sidebar</h2>
-            <p>Additional helpful resources and internal site navigation links.</p>
+            <h2>Quick Links</h2>
             <ul>
-                <li><a href="#faq">Frequently Asked Questions</a></li>
-                <li><a href="#support">Support Center</a></li>
+                <li><a href="services.html">Explore Our Services</a></li>
+                <li><a href="about.html">Learn About Our Team</a></li>
+                <li><a href="contact.html">Get in Touch</a></li>
             </ul>
         </aside>
 
-        <!-- Main Content Area -->
         <main class="main-content">
-            <h1>Accessible Web Design</h1>
-            <p>Ensuring your website is fully accessible creates an inclusive experience for all users, including those utilizing screen readers or keyboard navigation.</p>
-            
-            <p>Learn more about accessibility guidelines by visiting the <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C Web Accessibility Initiative</a>.</p>
+            <h1>Building Web Products for Everyone</h1>
+            <p>Welcome to Inclusive Web Tech. We specialize in designing web experiences that strictly adhere to accessibility standards, making digital tools usable for everyone regardless of physical or visual ability.</p>
             
             <section>
-                <h2>Screen Reader Utility Demonstration</h2>
-                <!-- Accessible button tied to visually hidden screen reader text -->
-                <span id="btn-desc" class="screen-reader-text">Pressing this button opens the interactive user profile menu</span>
-                <button type="button" class="action-btn" aria-labelledby="btn-desc">
-                    User Options
+                <h2>Accessibility First Approach</h2>
+                <p>Ensuring accessible layouts is not just an technical requirement—it's standard practice. Check out the official <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C Web Accessibility Initiative</a> for global standards.</p>
+                
+                <span id="btn-desc" class="screen-reader-text">Pressing this button navigates to our service offering list</span>
+                <button type="button" class="action-btn" aria-labelledby="btn-desc" onclick="location.href='services.html'">
+                    View Services
                 </button>
             </section>
         </main>
         
     </div>
 
+    <!-- Centered Footer -->
     <footer>
         <p>&copy; 2026 Inclusive Web Tech. All rights reserved.</p>
     </footer>
