@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Inclusive Web Tech</title>
+    <title>Home — Inclusive Web Tech</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Centered Header & Nav -->
     <header>
         <div class="header-container">
-            <h1 class="site-title">Inclusive Web Tech</h1>
+            <span class="site-title">Inclusive Web Tech</span>
             <nav aria-label="Main Navigation">
                 <span id="menu-label" class="screen-reader-text">Main Navigation Menu</span>
                 <ul role="menubar" aria-labelledby="menu-label">
                     <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -24,36 +23,32 @@
         </div>
     </header>
 
-    <!-- Main Page Layout -->
     <div class="container">
         
         <aside class="sidebar">
-            <h2>Quick Links</h2>
+            <h2>Quick Navigation</h2>
             <ul>
-                <li><a href="services.html">Explore Our Services</a></li>
-                <li><a href="about.html">Learn About Our Team</a></li>
+                <li><a href="services.html">Services Overview</a></li>
+                <li><a href="about.html">Our Mission</a></li>
                 <li><a href="contact.html">Get in Touch</a></li>
             </ul>
         </aside>
 
         <main class="main-content">
             <h1>Building Web Products for Everyone</h1>
-            <p>Welcome to Inclusive Web Tech. We specialize in designing web experiences that strictly adhere to accessibility standards, making digital tools usable for everyone regardless of physical or visual ability.</p>
+            <p>Welcome to Inclusive Web Tech. We design digital tools that strictly adhere to modern web accessibility standards, ensuring an intuitive experience for all users.</p>
             
-            <section>
-                <h2>Accessibility First Approach</h2>
-                <p>Ensuring accessible layouts is not just an technical requirement—it's standard practice. Check out the official <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C Web Accessibility Initiative</a> for global standards.</p>
-                
-                <span id="btn-desc" class="screen-reader-text">Pressing this button navigates to our service offering list</span>
-                <button type="button" class="action-btn" aria-labelledby="btn-desc" onclick="location.href='services.html'">
-                    View Services
-                </button>
-            </section>
+            <h2>Accessibility Standards</h2>
+            <p>We ensure layouts remain simple, high-contrast, and keyboard-navigable without visual clutter. Learn more at the official <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C Web Accessibility Initiative</a>.</p>
+            
+            <span id="btn-desc" class="screen-reader-text">Navigates to services list page</span>
+            <button type="button" class="action-btn" aria-labelledby="btn-desc" onclick="location.href='services.html'">
+                Explore Services
+            </button>
         </main>
         
     </div>
 
-    <!-- Centered Footer -->
     <footer>
         <p>&copy; 2026 Inclusive Web Tech. All rights reserved.</p>
     </footer>
