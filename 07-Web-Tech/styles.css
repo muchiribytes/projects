@@ -4,11 +4,14 @@
 :root {
     --primary: #002583;
     --primary-hover: #001959;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
+    
+    /* Darkened text colors for high accessibility & contrast */
+    --text-main: #0f172a;      /* Slate 900 - clear, sharp primary text */
+    --text-muted: #334155;     /* Slate 700 - high contrast secondary text (replaces light grey) */
+    
     --bg-main: #ffffff;
     --bg-alt: #f8fafc;
-    --border-color: #e2e8f0;
+    --border-color: #cbd5e1;   /* Slate 300 - slightly darker border for crisp container bounds */
     --radius: 8px;
     --focus-ring: 0 0 0 3px rgba(0, 37, 131, 0.25);
 }
@@ -21,13 +24,15 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    /* Bumped default base size and line height */
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.65;
     color: var(--text-main);
     background-color: var(--bg-alt);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* ==========================================
@@ -49,7 +54,7 @@ header {
 }
 
 .site-title {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--primary);
@@ -67,22 +72,22 @@ nav ul {
 nav li a {
     color: var(--text-muted);
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 8px 18px;
     border-radius: var(--radius);
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600; /* Increased weight for crisp readability */
     transition: all 0.2s ease;
 }
 
 nav li a:hover {
     color: var(--primary);
-    background-color: var(--bg-alt);
+    background-color: #f1f5f9;
 }
 
 nav li a.active {
     color: var(--primary);
     background-color: #eef2ff;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* Accessible Focus States */
@@ -118,7 +123,8 @@ textarea:focus-visible {
 }
 
 .sidebar h2 {
-    font-size: 0.875rem;
+    font-size: 0.95rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--text-muted);
@@ -140,7 +146,8 @@ textarea:focus-visible {
 .sidebar a {
     color: var(--text-main);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 500;
     transition: color 0.2s ease;
 }
 
@@ -158,23 +165,24 @@ textarea:focus-visible {
 }
 
 .main-content h1 {
-    font-size: 1.75rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 800;
     color: var(--text-main);
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     letter-spacing: -0.02em;
 }
 
 .main-content h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
     color: var(--text-main);
-    margin: 28px 0 12px 0;
+    margin: 32px 0 14px 0;
 }
 
 .main-content p {
     color: var(--text-muted);
-    margin-bottom: 16px;
+    font-size: 1.0625rem;
+    margin-bottom: 18px;
 }
 
 /* Links & Buttons */
@@ -182,6 +190,7 @@ a {
     color: var(--primary);
     text-decoration: underline;
     text-underline-offset: 3px;
+    font-weight: 500;
 }
 
 a:hover {
@@ -190,8 +199,8 @@ a:hover {
 
 .action-btn {
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 0.95rem;
+    padding: 12px 24px;
+    font-size: 1rem;
     font-weight: 600;
     background-color: var(--primary);
     color: #ffffff;
@@ -207,17 +216,17 @@ a:hover {
 }
 
 /* ==========================================
-   4. Refined & Balanced Form Styles
+   4. Refined & High-Contrast Form Styles
    ========================================== */
 .contact-form {
-    max-width: 580px;
+    max-width: 600px;
     margin-top: 24px;
 }
 
 .form-row {
     display: flex;
     gap: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .form-group {
@@ -225,34 +234,34 @@ a:hover {
 }
 
 .form-group.full-width {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .form-group label {
     display: block;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 6px;
+    font-size: 0.95rem;
+    font-weight: 700; /* Darker label header */
+    margin-bottom: 8px;
     color: var(--text-main);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px 12px;
-    font-size: 0.95rem;
+    padding: 12px 14px;
+    font-size: 1rem; /* Clear 16px input text (prevents iOS auto-zoom) */
     font-family: inherit;
     color: var(--text-main);
     background-color: var(--bg-main);
-    border: 1px solid var(--border-color);
+    border: 1.5px solid var(--border-color); /* Slightly thicker border */
     border-radius: var(--radius);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #94a3b8;
-    font-size: 0.9rem;
+    color: #64748b; /* Darker placeholder color for readability */
+    font-size: 0.95rem;
 }
 
 .form-group input:focus,
@@ -271,11 +280,12 @@ a:hover {
    ========================================== */
 footer {
     text-align: center;
-    padding: 24px;
+    padding: 28px 24px;
     background-color: var(--bg-main);
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
-    font-size: 0.875rem;
+    font-size: 0.95rem;
+    font-weight: 500;
     margin-top: auto;
 }
 
@@ -323,18 +333,18 @@ footer {
     }
 
     nav li a {
-        padding: 6px 12px;
-        font-size: 0.875rem;
+        padding: 8px 12px;
+        font-size: 0.9rem;
     }
 
     .main-content {
-        padding: 20px;
+        padding: 24px 18px;
     }
 
     .form-row {
         flex-direction: column;
-        gap: 16px;
-        margin-bottom: 16px;
+        gap: 18px;
+        margin-bottom: 18px;
     }
 }
 
