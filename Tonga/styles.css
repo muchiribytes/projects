@@ -1,0 +1,175 @@
+/* Base Styles & CSS Variables */
+:root {
+    --brand-blue: #002583;
+    --brand-gold: #FFB800;
+    --bg-light: #E5E8EF;
+    --text-dark: #1F2937;
+    --card-bg: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* 1. Navigation Container (Centered) */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--brand-blue);
+    padding: 16px 24px;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0 16px;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: var(--brand-gold);
+}
+
+/* 2. Welcome Header */
+.welcome {
+    margin-top: 60px;
+    padding: 48px 24px 24px 24px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.welcome h1 {
+    color: var(--brand-blue);
+    font-size: 2.25rem;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.welcome p {
+    font-size: 1.125rem;
+    color: #4B5563;
+    margin: 0;
+}
+
+/* 3. About Section Card */
+section.about {
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 32px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.about h2 {
+    color: var(--brand-blue);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about img {
+    width: 100%;
+    max-width: 320px;
+    float: right;
+    margin-left: 24px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    height: auto;
+}
+
+.about p {
+    margin: 0;
+    color: #374151;
+    font-size: 1rem;
+}
+
+section.about::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 4. Contact Section Card */
+section.contact {
+    max-width: 800px;
+    margin: 24px auto 48px auto;
+    padding: 32px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.contact h2 {
+    color: var(--brand-blue);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact td {
+    padding: 12px 0;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.contact tr:last-child td {
+    border-bottom: none;
+}
+
+.contact td:first-child {
+    font-weight: 600;
+    color: #4B5563;
+    width: 30%;
+}
+
+.contact td:last-child {
+    color: var(--brand-blue);
+}
+
+/* 5. Responsive Adjustments */
+@media (max-width: 600px) {
+    .about img {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 16px;
+    }
+
+    section.about,
+    section.contact {
+        margin: 16px;
+        padding: 20px;
+    }
+
+    .welcome {
+        padding: 24px 16px 16px 16px;
+    }
+}
