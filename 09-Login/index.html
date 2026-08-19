@@ -10,6 +10,41 @@
 <body>
   <main class="page-wrapper">
     <!-- Card component will be inserted here -->
+     <section class="login-card" aria-labelledby="login-heading">
+  <h1 id="login-heading" class="login-card__title">Login</h1>
+  
+  <form class="login-card__form" action="#" method="POST" novalidate>
+    <div class="form-group">
+      <label for="username" class="visually-hidden">Username</label>
+      <input 
+        type="text" 
+        id="username" 
+        name="username" 
+        class="form-group__input" 
+        placeholder="Username" 
+        required 
+        autocomplete="username"
+        aria-required="true"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="visually-hidden">Password</label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        class="form-group__input" 
+        placeholder="Password" 
+        required 
+        autocomplete="current-password"
+        aria-required="true"
+      >
+    </div>
+
+    <button type="submit" class="login-card__btn">Login</button>
+  </form>
+</section>
   </main>
 </body>
 </html>
