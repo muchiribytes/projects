@@ -60,3 +60,139 @@ body {
   min-height: 100vh;
   padding: var(--space-md);
 }
+
+/* Accessibility Utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Login Card Container */
+.login-card {
+  background-color: var(--clr-card-bg);
+  width: 100%;
+  max-width: 28rem; /* ~448px for desktop layout */
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-card);
+  box-shadow: 0 1rem 2.5rem var(--clr-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Card Heading */
+.login-card__title {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  color: var(--clr-text-heading);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  letter-spacing: -0.02em;
+}
+
+/* Form Layout */
+.login-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Fields */
+.form-group__input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-family: var(--ff-body);
+  font-size: var(--fs-input);
+  color: var(--clr-text-body);
+  background-color: var(--clr-card-bg);
+  border: 1.5px solid var(--clr-input-border);
+  border-radius: var(--radius-input);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group__input::placeholder {
+  color: var(--clr-placeholder);
+  opacity: 1;
+}
+
+.form-group__input:focus-visible {
+  border-color: var(--clr-input-focus);
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
+
+/* Submit Button */
+.login-card__btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: calc(var(--space-xs) * 0.5);
+  padding: 0.875rem 1rem;
+  font-family: var(--ff-body);
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-bold);
+  color: var(--clr-btn-text);
+  background-color: var(--clr-btn-bg);
+  border: 2px solid var(--clr-button-shadow);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--clr-button-shadow);
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.login-card__btn:hover {
+  background-color: var(--clr-btn-hover);
+}
+
+.login-card__btn:focus-visible {
+  outline: 3px solid var(--clr-input-focus);
+  outline-offset: 2px;
+}
+
+.login-card__btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--clr-button-shadow);
+}
+
+/* Media Queries for Explicit Breakpoints */
+
+/* Mobile viewport (375px target) */
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: var(--space-sm);
+  }
+
+  .login-card {
+    padding: var(--space-lg) var(--space-md);
+    border-radius: calc(var(--radius-card) * 0.75);
+  }
+
+  .login-card__title {
+    margin-bottom: var(--space-lg);
+  }
+}
+
+/* Tablet viewport (768px target) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .login-card {
+    max-width: 26rem;
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+/* Desktop viewport (1440px target) */
+@media (min-width: 1025px) {
+  .login-card {
+    max-width: 28rem;
+  }
+}
