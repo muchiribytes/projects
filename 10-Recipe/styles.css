@@ -22,49 +22,60 @@
 
 body {
     font-family: var(--ff-body);
-    font-size: 1rem;
+    font-size: 16px;
     color: var(--clr-wenge-brown);
     background-color: var(--clr-eggshell);
     line-height: 1.5;
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    padding: 7.75rem 0;
 }
 
+/* Base Card Container */
 .recipe-card {
     background-color: var(--clr-white);
-    width: 736px;
-    padding: 2.5rem;
-    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 736px;
 }
 
+/* Enforce Landscape Image for Both Views */
 .recipe-image {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: 0.75rem;
     display: block;
-    margin-bottom: 2.5rem;
+}
+
+.card-content {
+    padding: 2.5rem;
 }
 
 h1 {
     font-family: var(--ff-heading);
     color: var(--clr-dark-charcoal);
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.1;
     margin-bottom: 1.5rem;
 }
 
-p {
+.intro-text {
+    margin-bottom: 2rem;
+    color: var(--clr-wenge-brown);
+}
+
+h2 {
+    font-family: var(--ff-heading);
+    color: var(--clr-nutmeg);
+    font-size: 1.75rem;
+    font-weight: 400;
     margin-bottom: 1.5rem;
 }
 
+/* Preparation Box */
 .prep-time {
     background-color: var(--clr-rose-white);
-    padding: 1.75rem;
+    padding: 1.5rem;
     border-radius: 0.75rem;
     margin-bottom: 2rem;
 }
@@ -77,85 +88,130 @@ p {
 }
 
 .prep-time ul {
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
 }
 
 .prep-time li {
+    padding-left: 0.75rem;
     margin-bottom: 0.5rem;
-    padding-left: 0.5rem;
 }
 
 .prep-time li::marker {
     color: var(--clr-dark-raspberry);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
-h2 {
-    font-family: var(--ff-heading);
-    color: var(--clr-nutmeg);
-    font-size: 1.75rem;
-    font-weight: 400;
-    margin-bottom: 1.25rem;
-}
-
-ul, ol {
-    padding-left: 1.5rem;
+/* Lists Styling */
+.ingredients-list, 
+.instructions-list {
+    padding-left: 1.25rem;
     margin-bottom: 2rem;
 }
 
-li {
-    padding-left: 1rem;
-    margin-bottom: 0.5rem;
+.ingredients-list li, 
+.instructions-list li {
+    padding-left: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
-ul li::marker {
+.ingredients-list li::marker {
     color: var(--clr-nutmeg);
-    font-size: 0.8rem;
+    font-size: 0.65rem;
 }
 
-ol li::marker {
+.instructions-list li::marker {
     color: var(--clr-nutmeg);
     font-weight: 700;
 }
 
-li strong {
+.instructions-list strong {
     color: var(--clr-wenge-brown);
 }
 
 hr {
     border: 0;
     border-top: 1px solid var(--clr-light-grey);
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
-blockquote {
-    background-color: var(--clr-rose-white);
-    border-left: 4px solid var(--clr-dark-raspberry);
-    padding: 1rem 1.5rem;
-    margin-bottom: 2rem;
-    font-style: italic;
-    border-radius: 0 0.5rem 0.5rem 0;
+/* Nutrition Table Styling */
+.table-description {
+    margin-bottom: 1.25rem;
 }
 
-table {
+.nutrition-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
 }
 
-tr:not(:last-child) {
+.nutrition-table tr:not(:last-child) {
     border-bottom: 1px solid var(--clr-light-grey);
 }
 
-td {
+.nutrition-table td {
     padding: 0.75rem 2rem;
 }
 
-td:first-child {
+.nutrition-table td:first-child {
     color: var(--clr-wenge-brown);
+    width: 50%;
 }
 
-td:last-child {
+.nutrition-table td:last-child {
     color: var(--clr-nutmeg);
     font-weight: 700;
+    width: 50%;
+}
+
+/* Desktop View (1440px): Centered card with rounded image corners */
+@media (min-width: 651px) {
+    body {
+        padding: 7.5rem 0;
+    }
+
+    .recipe-card {
+        border-radius: 1.5rem;
+        padding: 2.5rem;
+    }
+
+    .recipe-image {
+        border-radius: 0.75rem;
+    }
+
+    .card-content {
+        padding: 2.5rem 0 0 0;
+    }
+}
+
+/* Mobile View (375px target): Full bleed top-to-bottom, strictly two-line title */
+@media (max-width: 650px) {
+    body {
+        background-color: var(--clr-white);
+        padding: 0;
+        margin: 0;
+    }
+
+    .recipe-card {
+        width: 100%;
+        max-width: 375px;
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+    .recipe-image {
+        border-radius: 0;
+    }
+
+    .card-content {
+        padding: 2.5rem 1.5rem; /* Reduced side padding slightly to give text breathing room */
+    }
+
+    h1 {
+        font-size: 2rem; /* Scaled down slightly from 2.25rem to match Frontend Mentor 375px spec */
+        line-height: 1.1;
+    }
+
+    .nutrition-table td {
+        padding: 0.75rem 1rem;
+    }
 }
