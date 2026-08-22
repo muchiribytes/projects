@@ -32,3 +32,19 @@ body {
     min-height: 100vh;
     padding: 7.75rem 0;
 }
+
+.recipe-card {
+    background-color: var(--clr-white);
+    width: 736px;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.recipe-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    display: block;
+    margin-bottom: 2.5rem;
+}
