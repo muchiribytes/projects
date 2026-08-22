@@ -127,3 +127,35 @@ hr {
     border-top: 1px solid var(--clr-light-grey);
     margin-bottom: 2rem;
 }
+
+blockquote {
+    background-color: var(--clr-rose-white);
+    border-left: 4px solid var(--clr-dark-raspberry);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid var(--clr-light-grey);
+}
+
+td {
+    padding: 0.75rem 2rem;
+}
+
+td:first-child {
+    color: var(--clr-wenge-brown);
+}
+
+td:last-child {
+    color: var(--clr-nutmeg);
+    font-weight: 700;
+}
