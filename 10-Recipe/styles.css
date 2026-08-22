@@ -48,3 +48,44 @@ body {
     display: block;
     margin-bottom: 2.5rem;
 }
+
+h1 {
+    font-family: var(--ff-heading);
+    color: var(--clr-dark-charcoal);
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.prep-time {
+    background-color: var(--clr-rose-white);
+    padding: 1.75rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.prep-time h3 {
+    color: var(--clr-dark-raspberry);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.prep-time ul {
+    padding-left: 1.5rem;
+}
+
+.prep-time li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.prep-time li::marker {
+    color: var(--clr-dark-raspberry);
+    font-size: 0.8rem;
+}
